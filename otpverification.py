@@ -3,16 +3,16 @@ import math
 import random
 import smtplib
 
-# Function to generate a random OTP of a given length
+
 def generate_otp(length=6):
     digits = "0123456789"
     otp = "".join([random.choice(digits) for _ in range(length)])
     return otp
 
-# Generate a 6-digit OTP
+
 otp = generate_otp()
 
-# Message to be sent via email
+
 otp_message = otp + " is your OTP"
 
 # Set up the SMTP connection
@@ -41,3 +41,4 @@ else:
 
 # Close the SMTP connection
 smtp.quit()
+
